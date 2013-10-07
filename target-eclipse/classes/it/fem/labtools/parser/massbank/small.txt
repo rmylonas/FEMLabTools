@@ -1,0 +1,102 @@
+***** MassBank Batch Service Results *****
+
+Request Date: 2013/09/13 21:31:24 JST
+# Instrument Type: CE-ESI-TOF,ESI-ITFT,LC-ESI-IT,LC-ESI-ITFT,LC-ESI-ITTOF,LC-ESI-Q,LC-ESI-QIT,LC-ESI-QQ,LC-ESI-QTOF,LC-ESI-TOF
+# MS Type: MS3
+# Ion Mode: Positive
+
+
+### Query 1 ###
+# Name: Scan No. 4 at 0.0541 min.
+# Hit: 0
+
+Top 0 List
+Accession	Title	Formula	Mass	Score	Hit
+
+
+
+### Query 2 ###
+# Name: Scan No. 32 at 0.4756 min.
+# Hit: 1
+
+Top 1 List
+Accession	Title	Formula	Mass	Score	Hit
+
+KO008883	Biotin; LC-ESI-IT; MS3; m/z: 245/227; [M+H]+	C10H16N2O3S	244.08816	0.0545	4
+
+
+### Query 3 ###
+# Name: Scan No. 36 at 0.5356 min.
+# Hit: 0
+
+Top 0 List
+Accession	Title	Formula	Mass	Score	Hit
+
+
+
+### Query 4 ###
+# Name: Scan No. 40 at 0.5955 min.
+# Hit: 6
+
+Top 6 List
+Accession	Title	Formula	Mass	Score	Hit
+
+KO009146	Pyridoxamine 5'-phosphate; LC-ESI-IT; MS3; m/z: 249/134; [M+H]+	C8H13N2O5P	248.05621	0.1397	2
+KO009285	Tetrahydropalmatine; LC-ESI-IT; MS3; m/z: 356/165; [M+H]+	C21H25NO4	355.17836	0.1241	2
+KO009158	Pendimethalin; LC-ESI-IT; MS3; m/z: 282/212; [M+H]+	C13H19N3O4	281.13756	0.0855	2
+KO009313	Verapamil; LC-ESI-IT; MS3; m/z: 455/260; [M+H]+	C27H38N2O4	454.28316	0.0695	2
+KO008883	Biotin; LC-ESI-IT; MS3; m/z: 245/227; [M+H]+	C10H16N2O3S	244.08816	0.0497	2
+KO008982	Glycyrrhetinic acid; LC-ESI-IT; MS3; m/z: 471/263; [M+H]+	C30H46O4	470.33961	0.0386	2
+
+
+### Query 5 ###
+# Name: Scan No. 60 at 0.8984 min.
+# Hit: 1
+
+Top 1 List
+Accession	Title	Formula	Mass	Score	Hit
+
+KO009313	Verapamil; LC-ESI-IT; MS3; m/z: 455/260; [M+H]+	C27H38N2O4	454.28316	0.1112	4
+
+
+### Query 6 ###
+# Name: Scan No. 64 at 0.9522 min.
+# Hit: 3
+
+Top 3 List
+Accession	Title	Formula	Mass	Score	Hit
+
+KO008951	E-64; LC-ESI-IT; MS3; m/z: 358/341; [M+H]+	C15H27N5O5	357.20122	0.0716	3
+KO008883	Biotin; LC-ESI-IT; MS3; m/z: 245/227; [M+H]+	C10H16N2O3S	244.08816	0.0654	3
+KO009305	Timolol; LC-ESI-IT; MS3; m/z: 317/244; [M+H]+	C13H24N4O3S	316.15691	0.0567	3
+
+
+### Query 7 ###
+# Name: Scan No. 72 at 1.0704 min.
+# Hit: 2
+
+Top 2 List
+Accession	Title	Formula	Mass	Score	Hit
+
+KO008953	E-64; LC-ESI-IT; MS3; m/z: 358/298; [M+H]+	C15H27N5O5	357.20122	0.0851	4
+KO009072	Muramic acid; LC-ESI-IT; MS3; m/z: 252/144; [M+H]+	C9H17NO7	251.1005	0.0827	4
+
+
+### Query 8 ###
+# Name: Scan No. 76 at 1.1288 min.
+# Hit: 28
+
+Top 20 List
+Accession	Title	Formula	Mass	Score	Hit
+
+KO008967	Guanosine; LC-ESI-IT; MS3; m/z: 284/152; [M+H]+	C10H13N5O5	283.09167	0.7355	4
+KO009150	Penciclovir; LC-ESI-IT; MS3; m/z: 254/152; [M+H]+	C10H15N5O3	253.11749	0.5788	5
+KO008990	Ganciclovir; LC-ESI-IT; MS3; m/z: 256/152; [M+H]+	C9H13N5O4	255.09675	0.5372	4
+KO008820	L-Anserine; LC-ESI-IT; MS3; m/z: 241/224; [M+H]+	C10H16N4O3	240.12224	0.4440	9
+KO009270	Terbutaline; LC-ESI-IT; MS3; m/z: 226/152; [M+H]+	C12H19NO3	225.13649	0.3073	7
+KO008821	L-Anserine; LC-ESI-IT; MS3; m/z: 241/170; [M+H]+	C10H16N4O3	240.12224	0.2488	5
+KO008969	D-Glucosamine 6-phosphate; LC-ESI-IT; MS3; m/z: 260/206; [M+H]+	C6H14NO8P	259.0457	0.2067	4
+KO009104	Desthiobiotin; LC-ESI-IT; MS3; m/z: 215/197; [M+H]+	C10H18N2O3	214.13174	0.1940	5
+KO009224	Ranitidine; LC-ESI-IT; MS3; m/z: 315/224; [M+H]+	C13H22N4O3S	314.14126	0.1485	10
+
+#### END ###
