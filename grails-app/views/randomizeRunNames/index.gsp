@@ -42,8 +42,9 @@
   		</div>
   		<div class="control-group">
     		<label class="control-label" for="prefix">Instrument setting</label>
+    		<%! import it.fem.labtools.ms.instruments.InstrumentSettings %>
 		    <div class="controls">
-				<g:textField name="suffix" value="RP_pos"/>
+				<g:select name="instrument" from="${InstrumentSettings.values()}" optionKey="key"/>
 			</div>
   		</div>
 				

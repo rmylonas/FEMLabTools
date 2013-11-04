@@ -1,6 +1,6 @@
 package it.fem.labtools.grails
 
-import it.fem.labtools.grails.ParseMassBankController;
+import it.fem.labtools.grails.ParseMassBankController
 import grails.test.mixin.*
 
 import org.junit.*

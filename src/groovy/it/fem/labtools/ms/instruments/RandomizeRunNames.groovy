@@ -21,6 +21,14 @@ package it.fem.labtools.ms.instruments
 class RandomizeRunNames{ 
 	
 	
+	List<String> randomizeNames(String prefix, InstrumentSettings setting, List<String> sampleIds){
+		
+		RandomizePattern pattern = new RandomizePattern(setting.startPattern, setting.repeatPattern, setting.endPattern)
+		
+		return this.randomizeNames(prefix, setting.tag, sampleIds, pattern)
+	}
+	
+	
 	List<String> randomizeNames(String prefix, String suffix, List<String> sampleIds, RandomizePattern pattern){
 		
 		def runList = []

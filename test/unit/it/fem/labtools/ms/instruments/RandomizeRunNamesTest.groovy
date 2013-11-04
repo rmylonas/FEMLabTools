@@ -29,4 +29,18 @@ class RandomizeRunNamesTest extends GroovyTestCase{
 	}
 	
 	
+	void testSynaptPosSetting(){
+		List sampleIds = ['sample01', 'sample02', 'sample03', 'sample04', 'sample05', 'sample06', 'sample07']
+		String prefix = 'AB'
+		
+		// randomize
+		def randomize = new RandomizeRunNames()		
+		def runNames = randomize.randomizeNames(prefix, InstrumentSettings.SYNAPT_RP_POS, sampleIds)
+
+		assertEquals(17, runNames.size())
+		assertTrue(runNames[8].contains("AB009_sample"))
+		
+	}
+	
+	
 }

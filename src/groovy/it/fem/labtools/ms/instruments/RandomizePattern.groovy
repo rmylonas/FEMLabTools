@@ -15,6 +15,14 @@ package it.fem.labtools.ms.instruments
  *
  */
 class RandomizePattern {
+	
+	RandomizePattern(){}
+	
+	RandomizePattern(String startPattern, String repeatPattern, String endPattern){
+		this.startPattern = startPattern
+		this.repeatPattern = repeatPattern
+		this.endPattern = endPattern
+	}
 
 	String startPattern
 	String repeatPattern
