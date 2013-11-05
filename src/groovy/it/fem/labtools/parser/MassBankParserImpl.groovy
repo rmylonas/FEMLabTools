@@ -96,14 +96,19 @@ public class MassBankParserImpl implements MassBankParser{
 	
 	private void writeEntry(File outputFile){
 		currentEntry.hits.each { oneHit ->
-			oneHit = oneHit.replaceAll(";|:|,", "")
 			def infoArray = oneHit.split("\\t")
-			def score = infoArray[4]
-			def infoString = infoArray[3] + "," +
+			
+			def score = infoArray[4].replace(",", ".")
+			def mass = infoArray[3].replace(",", "")
+			def accession = infoArray[0].replaceAll(";|:|,", "")
+			def title = infoArray[1].replaceAll(";|:|,", "")
+			def formula = infoArray[2].replaceAll(";|:|,", "")
+			
+			def infoString = mass + "," +
 							 currentEntry.rT + "," +
-							 infoArray[0] + "," +
-							 infoArray[1] + "," +
-							 infoArray[2] + "," +
+							 accession + "," +
+							 title + "," +
+							 formula + "," +
 							 score
 							 
 			// append if score bigger than threshold
