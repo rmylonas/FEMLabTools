@@ -1,6 +1,7 @@
 package it.fem.labtools.grails
 
 import it.fem.labtools.parser.MassBankParserImpl
+import javax.servlet.http.Cookie
 
 class ParseMassBankController {
 	static scope = "session"
@@ -15,6 +16,15 @@ class ParseMassBankController {
 	def upload() {
 		def importFile
 		def exportFile
+		
+		// scoreThreshold
+		def scoreThreshold = params['scoreThreshold']
+		mbParser.scoreThreshold = scoreThreshold.toDouble()
+		
+		// save a cookie (for 100 days)
+		Cookie cookie = new Cookie("scoreThreshold",scoreThreshold)
+		cookie.maxAge = 100 * 24 * 60 * 60
+		response.addCookie(cookie)
 		
 		// upload the file
 		def f = request.getFile('massBankFile')

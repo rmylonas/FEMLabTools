@@ -48,8 +48,10 @@
 			</div>
   		</div>
 				
-		<div>
-			<input class="btn btn-primary" type="submit" value="Randomize">
+		<div class="control-group">
+			<div class="controls">
+				<input class="btn btn-primary" type="submit" value="Randomize">
+			</div>
 		</div>
     </g:uploadForm>
 

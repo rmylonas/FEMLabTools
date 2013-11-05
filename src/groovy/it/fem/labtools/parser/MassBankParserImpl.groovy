@@ -4,10 +4,13 @@ import java.io.File;
 
 public class MassBankParserImpl implements MassBankParser{
 
-	def static headerList = ['Query', 'Scan No.', 'Retention time [min]', 'Nr of hits', 'Accession', 'Title', 'Formula', 'Mass', 'Score', 'Hit']
+//	def static headerList = ['Query', 'Scan No.', 'Retention time [min]', 'Nr of hits', 'Accession', 'Title', 'Formula', 'Mass', 'Score', 'Hit']
+	def static headerList = ['Mass', 'Retention time [min]', 'Accession', 'Title', 'Formula', 'Score']
 	def currentEntry = [:]
 	boolean inQuery = false
 	def nrLines = 0
+	def scoreThreshold = 0.0
+	
 	
 	@Override
 	public void parse(File inputFile, File outputFile) {
@@ -17,7 +20,7 @@ public class MassBankParserImpl implements MassBankParser{
 		}
 		
 		// write the header to the csv-file
-		outputFile.write(headerList.join("\t") + "\n")
+		outputFile.write(headerList.join(",") + "\n")
 		
 		inputFile.eachLine{	line -> 
 			boolean check = parseLine(line.trim(), outputFile)
@@ -93,13 +96,19 @@ public class MassBankParserImpl implements MassBankParser{
 	
 	private void writeEntry(File outputFile){
 		currentEntry.hits.each { oneHit ->
-			outputFile.append currentEntry.queryNr + "\t" +
-				currentEntry.scanNr + "\t" +
-				currentEntry.rT + "\t" +
-				currentEntry.nrOfHits + "\t" +
-				oneHit + "\n"
-				
-				nrLines++
+			oneHit = oneHit.replaceAll(";|:|,", "")
+			def infoArray = oneHit.split("\\t")
+			def score = infoArray[4]
+			def infoString = infoArray[3] + "," +
+							 currentEntry.rT + "," +
+							 infoArray[0] + "," +
+							 infoArray[1] + "," +
+							 infoArray[2] + "," +
+							 score
+							 
+			// append if score bigger than threshold
+			if(score.toDouble() >= scoreThreshold) outputFile.append infoString + "\n"				
+			nrLines++
 		}
 		resetVariables();
 	}

@@ -27,15 +27,32 @@
   		</div>
 	</g:if>
 	
-	<g:uploadForm action="upload">
-		<input name="massBankFile" type="file" style="display:none">
-		<div class="input-append">
-			<input id="massBankInput" class="input-large" type="text">
-			<a class="btn" onclick="$('input[name=massBankFile]').click();">Browse</a>
+	<g:uploadForm action="upload" class="form-horizontal">
+	
+		<div class="control-group">
+	    	<label class="control-label" for="massBankInput">MassBank file</label>
+	    	<div class="controls">
+				<input name="massBankFile" type="file" style="display:none">
+				<div class="input-append">
+					<input id="massBankInput" class="input-large" type="text">
+					<a class="btn" onclick="$('input[name=massBankFile]').click();">Browse</a>
+				</div>
+			</div>
 		</div>
-		<div>
-			<input class="btn btn-primary" type="submit" value="Upload">
+			
+		<div class="control-group">
+	    	<label class="control-label" for="scoreThreshold">Score threshold</label>
+			<div class="controls">
+				<g:textField name="scoreThreshold" value="${(cookie(name:'scoreThreshold')?cookie(name:'scoreThreshold'):0.1)}" size="8"/>
+			</div>
 		</div>
+		
+		<div class="control-group">
+			<div class="controls">
+				<input class="btn btn-primary" type="submit" value="Upload">
+			</div>
+		</div>
+		
     </g:uploadForm>
     
     <g:if test="${flash.parsedFiles}">
