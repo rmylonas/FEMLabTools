@@ -2,14 +2,14 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>MassBank parser</title>    
+    <title>Filter CSV file on retention times</title>    
 </head>
 <body>
 
  <div class="container">
-    <h3>MassBank parser</h3>
+    <h3>Retention time filter</h3>
     
-    <h5>Upload a MassBank result file (in .txt format)</h5>
+    <h5>Upload your CSV file</h5>
       
     <!-- Show errors -->
     <g:if test="${flash.error}">
@@ -30,20 +30,20 @@
 	<g:uploadForm action="upload" class="form-horizontal">
 	
 		<div class="control-group">
-	    	<label class="control-label" for="massBankInput">MassBank file</label>
+	    	<label class="control-label" for="csvInput">CSV file</label>
 	    	<div class="controls">
-				<input name="massBankFile" type="file" style="display:none">
+				<input name="csvFile" type="file" style="display:none">
 				<div class="input-append">
-					<input id="massBankInput" class="input-large" type="text">
-					<a class="btn" onclick="$('input[name=massBankFile]').click();">Browse</a>
+					<input id="csvInput" class="input-large" type="text">
+					<a class="btn" onclick="$('input[name=csvFile]').click();">Browse</a>
 				</div>
 			</div>
 		</div>
 			
 		<div class="control-group">
-	    	<label class="control-label" for="scoreThreshold">Score threshold</label>
+	    	<label class="control-label" for="rtThreshold">Retention time threshold</label>
 			<div class="controls">
-				<g:textField name="scoreThreshold" value="${(cookie(name:'scoreThreshold')?cookie(name:'scoreThreshold'):0.1)}" size="8"/>
+				<g:textField name="rtThreshold" value="${(cookie(name:'rtThreshold')?cookie(name:'rtThreshold'):0.1)}" size="8"/>
 			</div>
 		</div>
 		
@@ -54,23 +54,13 @@
 		</div>
 		
     </g:uploadForm>
-    
-    <g:if test="${flash.parsedFiles}">
-  		<h5>Processed files:</h5>
-	</g:if>
-    
-    <ul>
-	    <g:each in="${flash.parsedFiles}">
-	    	<li><a href="download?filepath=${it.filepath}&filename=${it.name}">${it.name}</a></li>
-		</g:each>
-	</ul>
 
 </div> <!-- /container -->
 
 
     <script type="text/javascript">
-		$('input[name=massBankFile]').change(function() {
-		$('#massBankInput').val($(this).val());
+		$('input[name=csvFile]').change(function() {
+		$('#csvInput').val($(this).val());
 		});
 	</script>
 

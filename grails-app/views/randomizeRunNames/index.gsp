@@ -7,7 +7,7 @@
 <body>
 
  <div class="container">
-    <h3>Randomize run names</h2>
+    <h3>Randomize run names</h3>
     
     <h5>Enter a list of names (newline separated)</h5>
       
